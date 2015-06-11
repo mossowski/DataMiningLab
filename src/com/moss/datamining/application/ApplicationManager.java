@@ -17,6 +17,7 @@ public class ApplicationManager {
 		for (Entry<Integer, Joke> entry : FileReader.itsJokes.entrySet()) {
 		    Joke value = entry.getValue();
 		    value.calculateRating();
+		    value.setFunny(3);
 		}
 		
 		fr.saveData("jester.txt");

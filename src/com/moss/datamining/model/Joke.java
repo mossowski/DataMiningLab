@@ -8,6 +8,7 @@ public class Joke {
 	private ArrayList<Double> ratings;
 	private double rating;
 	private ArrayList<String> content;
+	private String funny;
 	
 	public Joke (int id) {
 		this.id = id;
@@ -32,6 +33,19 @@ public class Joke {
 		else {
 			this.rating = 0;
 		}
+		
+	}
+	
+	public void setFunny(double range) {
+		
+		if (this.rating >= range)
+			this.funny = "yes";
+		else
+			this.funny = "no";
+	}
+	
+	public String getFunny() {
+		return this.funny;
 	}
 
 	public int getId() {
